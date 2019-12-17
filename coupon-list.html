@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Scrooge - Responsive Bootstrap 4 Admin Dashboard Template
+Author: Hencework
+Support: support@hencework.com
+
+License: You must have a valid license purchased only from templatemonster to legally use the template for your project.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>MeMiles Vendor Dashboard</title>
+    <meta name="description" content="MeMiles Vendor Dashboard" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Morris Charts CSS -->
+    <link href="vendors/morris.js/morris.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Toastr CSS -->
+    <link href="vendors/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Toggles CSS -->
+    <link href="vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
+    <link href="vendors/jquery-toggles/css/themes/toggles-light.css" rel="stylesheet" type="text/css">
+    
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    
+	<!-- HK Wrapper -->
+	<div class="hk-wrapper hk-nav-alt">
+
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-xl navbar-light fixed-top hk-navbar hk-navbar-alt">
+            <a class="navbar-toggle-btn nav-link-hover navbar-toggler" href="javascript:void(0);" data-toggle="collapse" data-target="#navbarCollapseAlt" aria-controls="navbarCollapseAlt" aria-expanded="false" aria-label="Toggle navigation"><span class="feather-icon"><i data-feather="menu"></i></span></a>
+            <a class="navbar-brand text-red" href="dashboard1.html">
+                MeMiles Vendor
+            </a>
+            <div class="collapse navbar-collapse" id="navbarCollapseAlt">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home.html" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html" >Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html" >Subscribe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html" >Coupon</a>
+                    </li>
+                    <li class="nav-item dropdown show-on-hover">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Payment
+                        </a>
+                        <div class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                            <a class="dropdown-item" href="profile.html">Payment List</a>
+                            <a class="dropdown-item" href="invoice.html">Payment History</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="navbar-search-alt">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><span class="feather-icon"><i data-feather="search"></i></span></span>
+                        </div>
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    </div>
+                </form>
+            </div>
+            <ul class="navbar-nav hk-navbar-content">
+                <li class="nav-item">
+                    <a id="settings_toggle_btn" class="nav-link nav-link-hover" href="javascript:void(0);"><span class="feather-icon"><i data-feather="settings"></i></span></a>
+                </li>
+                <li class="nav-item dropdown dropdown-notifications">
+                    <a class="nav-link dropdown-toggle no-caret" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="feather-icon"><i data-feather="bell"></i></span><span class="badge-wrap"><span class="badge badge-success badge-indicator badge-indicator-sm badge-pill pulse"></span></span></a>
+                    <div class="dropdown-menu dropdown-menu-right" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                        <h6 class="dropdown-header">Notifications <a href="javascript:void(0);" class="">View all</a></h6>
+                        <div class="notifications-nicescroll-bar">
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <img src="dist/img/avatar1.jpg" alt="user" class="avatar-img rounded-circle">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text"><span class="text-dark text-capitalize">Evie Ono</span> accepted your invitation to join the team</div>
+                                            <div class="notifications-time">12m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <img src="dist/img/avatar2.jpg" alt="user" class="avatar-img rounded-circle">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text">New message received from <span class="text-dark text-capitalize">Misuko Heid</span></div>
+                                            <div class="notifications-time">1h</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <span class="avatar-text avatar-text-primary rounded-circle">
+													<span class="initial-wrap"><span><i class="zmdi zmdi-account font-18"></i></span></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text">You have a follow up with<span class="text-dark text-capitalize"> Scrooge head</span> on <span class="text-dark text-capitalize">friday, dec 19</span> at <span class="text-dark">10.00 am</span></div>
+                                            <div class="notifications-time">2d</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <span class="avatar-text avatar-text-success rounded-circle">
+													<span class="initial-wrap"><span>A</span></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text">Application of <span class="text-dark text-capitalize">Sarah Williams</span> is waiting for your approval</div>
+                                            <div class="notifications-time">1w</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <span class="avatar-text avatar-text-warning rounded-circle">
+													<span class="initial-wrap"><span><i class="zmdi zmdi-notifications font-18"></i></span></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text">Last 2 days left for the project</div>
+                                            <div class="notifications-time">15d</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown dropdown-authentication">
+                    <a class="nav-link dropdown-toggle no-caret" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="media">
+                            <div class="media-img-wrap">
+                                <div class="avatar">
+                                    <img src="dist/img/avatar5.jpg" alt="user" class="avatar-img rounded-circle">
+                                </div>
+                                <span class="badge badge-success badge-indicator"></span>
+                            </div>
+                            <div class="media-body">
+                                <span>Aash Bill<i class="zmdi zmdi-chevron-down"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
+                        <a class="dropdown-item" href="profile.html"><i class="dropdown-icon zmdi zmdi-account"></i><span>Profile</span></a>
+                        <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-card"></i><span>My balance</span></a>
+                        <a class="dropdown-item" href="inbox.html"><i class="dropdown-icon zmdi zmdi-email"></i><span>Inbox</span></a>
+                        <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-settings"></i><span>Settings</span></a>
+                        <div class="dropdown-divider"></div>
+                        <div class="sub-dropdown-menu show-on-hover">
+                            <a href="#" class="dropdown-toggle dropdown-item no-caret"><i class="zmdi zmdi-check text-success"></i>Online</a>
+                            <div class="dropdown-menu open-left-side">
+                                <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-check text-success"></i><span>Online</span></a>
+                                <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-circle-o text-warning"></i><span>Busy</span></a>
+                                <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-minus-circle-outline text-danger"></i><span>Offline</span></a>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-power"></i><span>Log out</span></a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- /Top Navbar -->
+
+        <!-- Main Content -->
+        <div class="hk-pg-wrapper">
+			<!-- Container -->
+            <div class="container mt-xl-50 mt-sm-30 mt-15">
+				<!-- Title -->
+				<div class="hk-pg-header align-items-top mb-2">
+					<div>
+						<h2 class="hk-pg-title font-weight-600 mb-10">Coupon List</h2>
+					</div>
+					<div class="d-flex">
+						<!-- <button class="btn btn-sm btn-outline-light btn-wth-icon icon-wthot-bg mr-15 mb-15"><span class="icon-label"><i class="fa fa-download"></i> </span><span class="btn-text">Export CSV </span></button> -->
+						<!-- <a href="subscribe-form.html" class="btn btn-sm btn-danger mb-15">
+                            <i class="fa fa-plus mr-1"></i>
+                            Tambah Coupon Baru
+                        </a> -->
+					</div>
+				</div>
+				<!-- /Title -->
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <section class="hk-sec-wrapper">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="table-wrap">
+                                        <table id="datable_1" class="table table-hover w-100 display pb-0 mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th width="50%">Nama Coupon</th>
+                                                    <th width="25%">Paket</th>
+                                                    <th width="20%"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="coupon-detail.html">
+                                                            Coupon Iphone 7 Red Diskon <button class="btn btn-sm btn-danger ml-1">20%</button>
+                                                        </a>
+                                                    </td> 
+                                                    <td>RP 500.000</td>
+                                                    <td class="text-right">
+                                                        <!-- <a href="product-detail.html" class="btn btn-sm btn-outline-light btn-wth-icon icon-wthot-bg mb-15">
+                                                            <i class="fa fa-eye"></i>
+                                                        </a> -->
+                                                        <a href="coupon-detail.html" class="btn btn-sm btn-outline-light btn-wth-icon icon-wthot-bg mb-15">
+                                                            <i class="fa fa-eye"></i>
+                                                        </a>
+                                                        <a href="javascript:void()" class="btn btn-sm btn-danger btn-wth-icon icon-wthot-bg mb-15">
+                                                            <i class="fa fa-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- /Row -->
+            </div>
+            <!-- /Container -->
+			
+            <!-- Footer -->
+            <div class="hk-footer-wrap container">
+                <footer class="footer">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <p>Pampered by<a href="https://hencework.com/" class="text-dark" target="_blank">Hencework</a> © 2019</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <p class="d-inline-block">Follow us</p>
+                            <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-facebook"></i></span></a>
+                            <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-twitter"></i></span></a>
+                            <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-google-plus"></i></span></a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- /Footer -->
+        </div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /HK Wrapper -->
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Slimscroll JavaScript -->
+    <script src="dist/js/jquery.slimscroll.js"></script>
+
+    <!-- Fancy Dropdown JS -->
+    <script src="dist/js/dropdown-bootstrap-extended.js"></script>
+
+    <!-- FeatherIcons JavaScript -->
+    <script src="dist/js/feather.min.js"></script>
+
+    <!-- Toggles JavaScript -->
+    <script src="vendors/jquery-toggles/toggles.min.js"></script>
+    <script src="dist/js/toggle-data.js"></script>
+	
+	<!-- Toastr JS -->
+    <script src="vendors/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+    
+	<!-- Counter Animation JavaScript -->
+	<script src="vendors/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="vendors/jquery.counterup/jquery.counterup.min.js"></script>
+	
+	<!-- Morris Charts JavaScript -->
+    <script src="vendors/raphael/raphael.min.js"></script>
+    <script src="vendors/morris.js/morris.min.js"></script>
+	
+	<!-- Easy pie chart JS -->
+    <script src="vendors/easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+	
+	<!-- Flot Charts JavaScript -->
+    <script src="vendors/flot/excanvas.min.js"></script>
+    <script src="vendors/flot/jquery.flot.js"></script>
+    <script src="vendors/flot/jquery.flot.pie.js"></script>
+    <script src="vendors/flot/jquery.flot.resize.js"></script>
+    <script src="vendors/flot/jquery.flot.time.js"></script>
+    <script src="vendors/flot/jquery.flot.stack.js"></script>
+    <script src="vendors/flot/jquery.flot.crosshair.js"></script>
+    <script src="vendors/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+	
+	<!-- EChartJS JavaScript -->
+    <script src="vendors/echarts/dist/echarts-en.min.js"></script>
+    
+    <!-- Init JavaScript -->
+    <script src="dist/js/init.js"></script>
+	<script src="dist/js/dashboard2-data.js"></script>
+	
+</body>
+
+</html>
